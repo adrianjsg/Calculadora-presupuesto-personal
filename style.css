@@ -1,0 +1,90 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #D4EBF8; /* Azul suave */
+    color: #0A3981; /* Azul oscuro */
+}
+
+/* Títulos */
+h1, h2 {
+    text-align: center;
+    color: #1F509A; /* Azul intermedio */
+}
+
+/* Formulario */
+#formulario {
+    margin: 20px auto;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #E38E49; /* Naranja cálido */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #D4EBF8; /* Texto claro */
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #1F509A; /* Azul intermedio */
+    border-radius: 5px;
+    background-color: #D4EBF8; /* Fondo suave */
+    color: #0A3981; /* Texto oscuro */
+}
+
+input::placeholder, select {
+    color: #1F509A; /* Azul intermedio */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0a8159; /* Azul oscuro */
+    color: #D4EBF8; /* Texto claro */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1F509A; /* Naranja cálido */
+    color: #D4EBF8; /* Texto claro */
+}
+
+/* Resultado */
+#resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #1F509A; /* Azul intermedio */
+    border-radius: 5px;
+    color: #0a8159; /* Texto claro */
+    font-weight: bold;
+    text-align: center;
+}
+
+#resultado h2 {
+    color: #D4EBF8; /* Texto claro */
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+
+#lista-gastos li {
+    background-color: #FAF6E3; /* Fondo claro para buena legibilidad */
+    color: #1F509A; /* Azul intermedio para el texto */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #0A3981; /* Azul oscuro para el borde */
+    font-weight: bold;
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+
+
+

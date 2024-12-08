@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Presupuestos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Importa Chart.js -->
+</head>
+<body>
+    <h1>Calculadora de Presupuestos</h1>
+    <div id="formulario">
+        <div class="form-group">
+            <label for="ingreso">Ingresos:</label>
+            <input type="number" id="ingreso" class="form-control" placeholder="Ingresa tu ingreso">
+        </div>
+        <div class="form-group">
+            <label for="gasto">Gasto:</label>
+            <input type="number" id="gasto" class="form-control" placeholder="Ingresa un gasto">
+        </div>
+        <div class="form-group">
+            <label for="tipo-gasto">Tipo de gasto:</label>
+            <select id="tipo-gasto" class="form-control">
+                <option value="comida">Comida</option>
+                <option value="ocio">Ocio</option>
+                <option value="luz">Luz</option>
+                <option value="gas">Gas</option>
+                <option value="agua">Agua</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+        <div class="form-group" id="campo-otro" style="display: none;">
+            <label for="gasto-otro">Especifica el tipo de gasto:</label>
+            <input type="text" id="gasto-otro" class="form-control" placeholder="Ingresa el tipo de gasto">
+        </div>
+        <button id="calcular" class="btn btn-primary">Añadir Gasto</button>
+    </div>
+    <div id="resultado">
+        <h2>Lista de Gastos:</h2>
+        <ul id="lista-gastos"></ul>
+        <h2>Gráfico de Gastos:</h2>
+        <canvas id="grafico-gastos"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
