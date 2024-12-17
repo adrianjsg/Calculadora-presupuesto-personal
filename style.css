@@ -1,89 +1,86 @@
+/* Paleta de colores */
+:root {
+    --primary-color: #0A3981;
+    --secondary-color: #E38E49;
+    --background-color: #D4EBF8;
+    --text-color: #1F509A;
+    --light-text: #FFFFFF;
+}
+
 /* General */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
-    background-color: #D4EBF8; /* Azul suave */
-    color: #0A3981; /* Azul oscuro */
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-/* Títulos */
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    text-align: center;
+    padding: 10px 0;
+}
+
 h1, h2 {
     text-align: center;
-    color: #1F509A; /* Azul intermedio */
 }
 
-/* Formulario */
-#formulario {
-    margin: 20px auto;
+form {
+    background-color: var(--secondary-color);
     max-width: 400px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #E38E49; /* Naranja cálido */
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #D4EBF8; /* Texto claro */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+label, input, select, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 input, select {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #1F509A; /* Azul intermedio */
+    padding: 8px;
+    border: 1px solid var(--text-color);
     border-radius: 5px;
-    background-color: #D4EBF8; /* Fondo suave */
-    color: #0A3981; /* Texto oscuro */
-}
-
-input::placeholder, select {
-    color: #1F509A; /* Azul intermedio */
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: #0a8159; /* Azul oscuro */
-    color: #D4EBF8; /* Texto claro */
+    background-color: var(--primary-color);
+    color: var(--light-text);
     border: none;
-    border-radius: 5px;
+    padding: 10px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #1F509A; /* Naranja cálido */
-    color: #D4EBF8; /* Texto claro */
+    background-color: var(--text-color);
+    transform: scale(1.05);
 }
 
-/* Resultado */
 #resultado {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #1F509A; /* Azul intermedio */
-    border-radius: 5px;
-    color: #0a8159; /* Texto claro */
-    font-weight: bold;
+    max-width: 600px;
+    margin: 20px auto;
     text-align: center;
 }
 
-#resultado h2 {
-    color: #D4EBF8; /* Texto claro */
-    text-align: center;
-    font-size: 1.5em;
-    margin-bottom: 15px;
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-
-#lista-gastos li {
-    background-color: #FAF6E3; /* Fondo claro para buena legibilidad */
-    color: #1F509A; /* Azul intermedio para el texto */
+li {
+    background-color: #FAF6E3;
     margin: 5px 0;
     padding: 10px;
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
-    border: 1px solid #0A3981; /* Azul oscuro para el borde */
-    font-weight: bold;
-    text-align: left; /* Alinear texto a la izquierda */
 }
+
 
 
 

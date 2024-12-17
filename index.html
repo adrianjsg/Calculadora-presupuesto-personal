@@ -1,47 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Presupuestos</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Importa Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Importar Chart.js -->
 </head>
 <body>
-    <h1>Calculadora de Presupuestos</h1>
-    <div id="formulario">
-        <div class="form-group">
-            <label for="ingreso">Ingresos:</label>
-            <input type="number" id="ingreso" class="form-control" placeholder="Ingresa tu ingreso">
-        </div>
-        <div class="form-group">
-            <label for="gasto">Gasto:</label>
-            <input type="number" id="gasto" class="form-control" placeholder="Ingresa un gasto">
-        </div>
-        <div class="form-group">
-            <label for="tipo-gasto">Tipo de gasto:</label>
-            <select id="tipo-gasto" class="form-control">
-                <option value="comida">Comida</option>
-                <option value="ocio">Ocio</option>
-                <option value="luz">Luz</option>
-                <option value="gas">Gas</option>
-                <option value="agua">Agua</option>
-                <option value="otro">Otro</option>
-            </select>
-        </div>
-        <div class="form-group" id="campo-otro" style="display: none;">
-            <label for="gasto-otro">Especifica el tipo de gasto:</label>
-            <input type="text" id="gasto-otro" class="form-control" placeholder="Ingresa el tipo de gasto">
-        </div>
-        <button id="calcular" class="btn btn-primary">Añadir Gasto</button>
-    </div>
-    <div id="resultado">
-        <h2>Lista de Gastos:</h2>
-        <ul id="lista-gastos"></ul>
-        <h2>Gráfico de Gastos:</h2>
-        <canvas id="grafico-gastos"></canvas>
-    </div>
+    <header>
+        <h1>Calculadora de Presupuestos</h1>
+    </header>
+
+    <main>
+        <form id="formulario">
+            <div>
+                <label for="ingreso">Ingresos:</label>
+                <input type="number" id="ingreso" placeholder="Ingresa un ingreso">
+            </div>
+            <div>
+                <label for="gasto">Gasto:</label>
+                <input type="number" id="gasto" placeholder="Ingresa un gasto">
+            </div>
+            <div>
+                <label for="tipo-gasto">Tipo de gasto:</label>
+                <select id="tipo-gasto">
+                    <option value="Comida">Comida</option>
+                    <option value="Ocio">Ocio</option>
+                    <option value="Luz">Luz</option>
+                    <option value="Gas">Gas</option>
+                    <option value="Agua">Agua</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+            <div id="campo-otro" style="display: none;">
+                <label for="gasto-otro">Especifica el gasto:</label>
+                <input type="text" id="gasto-otro" placeholder="Ingresa tipo de gasto">
+            </div>
+            <button type="button" id="calcular">Añadir Gasto</button>
+        </form>
+
+        <section id="resultado">
+            <h2>Lista de Gastos:</h2>
+            <ul id="lista-gastos"></ul>
+            <h2>Presupuesto Restante: <span id="balance">0 €</span></h2>
+            <h2>Gráfico de Gastos:</h2>
+            <canvas id="grafico-gastos"></canvas>
+        </section>
+    </main>
+
+    <footer>
+        <p>Hecho con ❤️ por Adrián</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
+
 
